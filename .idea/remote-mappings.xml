@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@ssh://aaron@10.96.54.48:36000/home/aaron/anaconda2/envs/caffe/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="S:" remote-root="/home/aaron" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>
