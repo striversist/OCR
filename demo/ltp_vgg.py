@@ -7,7 +7,6 @@ import words_detect as wd
 
 import os
 cwd = os.getcwd()
-target_img = '../images/slogn_01.jpg'
 
 # ----------------------- detect ----------------------------
 def detect(img_path):
@@ -34,7 +33,7 @@ def detect(img_path):
 # ----------------------- recognize --------------------------
 import caffe
 import numpy as np
-def recognize(rect_list):
+def recognize(img_path, rect_list):
     print 'chdir: ', cwd
     os.chdir(cwd)
 
@@ -47,7 +46,7 @@ def recognize(rect_list):
 
     labels = np.loadtxt(labels_file, str, delimiter='\t')
     net = caffe.Classifier(deploy, model, image_dims=(32, 100), raw_scale=255)
-    image = caffe.io.load_image(target_img, False)
+    image = caffe.io.load_image(img_path, False)
 
     for rect in rect_list:
         # coordinates of rect (x1,y1, x2,y2) for word 'food' in picture img_20.jpg
@@ -66,8 +65,10 @@ def main(args):
     parser.add_argument('--image-path', dest="image_path",
                         type=str, help=('Image file path'))
     parameters = parser.parse_args(args)
-    print 'input image path: ', parameters.image_path
-    recognize(detect(parameters.image_path))
+
+    img_path = parameters.image_path
+    print 'input image path: ', img_path
+    recognize(img_path, detect(img_path))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
