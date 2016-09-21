@@ -27,4 +27,5 @@ def detect(img_path):
             rect_list.append(rect)
     for rect in rect_list:
         print rect
+    os.chdir(cwd)
     return rect_list
