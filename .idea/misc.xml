@@ -29,5 +29,5 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 2.7.12 (ssh://aaron@10.96.54.48:36000/home/aaron/anaconda2/envs/caffe/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 2.7.12 (ssh://aaron@10.96.54.48:36000/home/aaron/anaconda2/envs/tensorflow/bin/python)" project-jdk-type="Python SDK" />
 </project>
