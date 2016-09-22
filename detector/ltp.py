@@ -3,7 +3,7 @@ import sys
 
 ltp_root = '/home/aaron/projects/LTPTextDetector'
 sys.path.append(ltp_root)
-import words_detect as wd
+import libwords_detect as wd
 
 import os
 cwd = os.getcwd()
