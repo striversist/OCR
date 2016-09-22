@@ -5,6 +5,7 @@ sys.path.append('../')
 from detector import ltp
 from recognizer import vgg
 import argparse
+import show_result
 
 
 def main(args):
@@ -15,7 +16,9 @@ def main(args):
 
     img_path = parameters.image_path
     print 'input image path: ', img_path
-    vgg.recognize(img_path, ltp.detect(img_path))
+    boxes = ltp.detect(img_path)
+    words = vgg.recognize(img_path, boxes)
+    show_result.show(img_path, boxes, words)
 
 
 if __name__ == "__main__":

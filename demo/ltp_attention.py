@@ -4,6 +4,7 @@ sys.path.append('../')
 from detector import ltp
 from recognizer import attention
 import argparse
+import show_result
 
 
 def main(args):
@@ -14,10 +15,9 @@ def main(args):
 
     img_path = parameters.image_path
     print 'input image path: ', img_path
-    rect_list = ltp.detect(img_path)
-    words = attention.recognize(img_path, rect_list)
-    for word in words:
-        print word
+    boxes = ltp.detect(img_path)
+    words = attention.recognize(img_path, boxes)
+    show_result.show(img_path, boxes, words)
 
 
 if __name__ == "__main__":
