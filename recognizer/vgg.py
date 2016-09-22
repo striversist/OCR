@@ -1,3 +1,6 @@
+import sys
+caffe_root = '/home/aaron/projects/caffe/build/install'
+sys.path.append(caffe_root + '/python')
 import caffe
 import numpy as np
 

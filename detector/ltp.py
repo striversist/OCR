@@ -17,7 +17,7 @@ def detect(img_path):
     token1 = ' '
     token2 = ';'
     rect_list = []
-    if detect_result is not None:
+    if detect_result is not None and len(detect_result) > 0:
         word_rects = detect_result.split(token2)
         for word_rect in word_rects:
             segs = word_rect.split(token1)
